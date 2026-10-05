@@ -1463,7 +1463,7 @@ define Device/xiaomi_miwifi-r3
 			     append-ubi | check-size
   DEVICE_VENDOR := Xiaomi
   DEVICE_MODEL := Mi Router R3
-  DEVICE_PACKAGES := kmod-mt7603 kmod-mt76x2 kmod-usb2 kmod-usb-ohci uboot-envtools kmod-leds-gpio kmod-gpio-button
+  DEVICE_PACKAGES := apk-mbedtls base-files ca-bundle dnsmasq dropbear firewall4 fstools kmod-gpio-button-hotplug kmod-leds-gpio kmod-nft-offload kmod-rt2800-soc libc libgcc libustream-mbedtls logd mtd netifd nftables odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe procd-ujail swconfig uci uclient-fetch urandom-seed urngd wpad-basic-mbedtls kmod-mt76x2 kmod-usb2 kmod-usb-ohci luci luci-app-attendedsysupgrade usteer -wpad-basic-mbedtls wpad-mesh-mbedtls
 endef
 TARGET_DEVICES += xiaomi_miwifi-r3
 
