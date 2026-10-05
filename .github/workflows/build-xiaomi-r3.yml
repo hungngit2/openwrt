@@ -41,6 +41,8 @@ jobs:
         run: |
           echo "CONFIG_TARGET_ramips=y" >> .config
           echo "CONFIG_TARGET_ramips_mt7620=y" >> .config
+          echo "CONFIG_TARGET_MULTI_PROFILE=y" >> .config
+          echo "CONFIG_TARGET_ALL_PROFILES=n" >> .config
           echo "CONFIG_TARGET_DEVICE_ramips_mt7620_DEVICE_xiaomi_miwifi-r3=y" >> .config
           make defconfig
 
