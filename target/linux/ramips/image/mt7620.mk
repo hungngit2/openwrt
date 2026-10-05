@@ -1457,13 +1457,13 @@ define Device/xiaomi_miwifi-r3
   IMAGE/kernel1.bin := append-kernel | check-size $$$$(KERNEL_SIZE)
   IMAGE/rootfs0.bin := append-ubi | check-size
   IMAGE/sysupgrade.bin := sysupgrade-tar | append-metadata
-  IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-ubi | check-size
-  IMAGE/breed-factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | \
-			     append-kernel | pad-to $$$$(KERNEL_SIZE) | \
+  IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-ubi | check-size
+  IMAGE/breed-factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | \
+			     append-kernel | pad-to $$(KERNEL_SIZE) | \
 			     append-ubi | check-size
   DEVICE_VENDOR := Xiaomi
   DEVICE_MODEL := Mi Router R3
-  DEVICE_PACKAGES := apk-mbedtls base-files ca-bundle dnsmasq dropbear firewall4 fstools kmod-gpio-button-hotplug kmod-leds-gpio kmod-nft-offload kmod-rt2800-soc libc libgcc libustream-mbedtls logd mtd netifd nftables odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe procd-ujail swconfig uci uclient-fetch urandom-seed urngd wpad-basic-mbedtls kmod-mt76x2 kmod-usb2 kmod-usb-ohci luci luci-app-attendedsysupgrade usteer -wpad-basic-mbedtls wpad-mesh-mbedtls
+  DEVICE_PACKAGES := apk-mbedtls base-files ca-bundle dnsmasq dropbear firewall4 fstools kmod-gpio-button-hotplug kmod-leds-gpio kmod-nft-offload kmod-rt2800-soc libc libgcc libustream-mbedtls logd mtd netifd nftables odhcp6c odhcpd-ipv6only ppp ppp-mod-pppoe procd-ujail swconfig uci uclient-fetch urandom-seed urngd wpad-basic-mbedtls kmod-mt76x2 kmod-usb2 kmod-usb-ohci luci luci-app-attendedsysupgrade usteer -wpad-basic-mbedtls wpad-mesh-mbedtls uboot-envtools
 endef
 TARGET_DEVICES += xiaomi_miwifi-r3
 
